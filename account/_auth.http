@@ -1,0 +1,52 @@
+###
+POST {{host}}/auth/register
+Content-Type: application/json
+Accept: application/json
+
+{
+  "email": "L@LZAH.online",
+  "password1": "L@43d",
+  "password2": "L@43d"
+}
+
+
+###
+POST {{host}}/auth/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "email": "L@LZAH.online",
+  "password": "alfa01"
+}
+
+
+###
+GET {{host}}/auth/me
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer {{access}}
+
+
+###
+PUT {{host}}/auth/me
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer {{access_}}
+
+{
+  "first_name": "Layth",
+  "last_name": "Zahid"
+}
+
+###
+POST {{host}}/auth/change-password
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer {{access_}}
+
+{
+  "old_password": "alfa01",
+  "new_password1": "alfa01alfa01",
+  "new_password2": "alfa01alfa01"
+}

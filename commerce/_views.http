@@ -1,0 +1,158 @@
+GET {{host}}/vendor
+Content-Type: application/json
+Accept: application/json
+
+###
+#GET {{host}}/product/variant/
+#Accept: application/json
+#
+####
+#GET {{host}}/product/property/
+#Accept: application/json
+
+###
+GET {{host}}/product/all
+
+###
+GET {{host}}/product/1/related
+Accept: application/json
+
+
+###
+GET {{host}}/product/all?is_featured=True
+Accept: application/json
+
+###
+GET {{host}}/product/all?merchant_name=1
+Accept: application/json
+
+###
+GET {{host}}/product/all?vendor_name=Adidas
+Accept: application/json
+
+###
+GET {{host}}/product/all?label_name=جديد
+Accept: application/json
+
+###
+GET {{host}}/product/all?search=Stick&category_name=Home
+Accept: application/json
+
+###
+GET {{host}}/product/all?lowest_gte=25000&lowest_lte=30000
+Accept: application/json
+
+###
+GET {{host}}/product/merchants
+Accept: application/json
+
+###
+GET {{host}}/product/categories
+Accept: application/json
+
+###
+GET {{host}}/product/category/1/products
+Accept: application/json
+
+###
+GET {{host}}/product/labels
+Accept: application/json
+
+
+###
+POST {{host}}/item/add_to_cart
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{access}}
+
+{
+  "slug": "4df8438d-8ca9-4109-b57b-5e7ce96cfa67",
+  "properties": 2,
+  "item_qty": 1
+}
+
+###
+GET {{host}}/item/all
+Accept: application/json
+Authorization: Bearer {{access}}
+
+###
+GET {{host}}/item/get/5
+Accept: application/json
+Authorization: Bearer {{access}}
+
+###
+DELETE {{host}}/item/delete/4
+Accept: application/json
+Authorization: Bearer {{access}}
+
+
+###
+POST {{host}}/item/increase_item_qty/3
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer {{access}}
+
+###
+POST {{host}}/item/decrease_item_qty/3
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer {{access}}
+
+
+###
+POST {{host}}/order/create_update
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{access}}
+
+{
+  "items": [
+    5, 6
+  ]
+}
+
+###
+GET {{host}}/order/all?ordered=true
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{access}}
+
+
+###
+POST {{host}}/order/2/update_address
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{access}}
+
+{
+  "address_pk": 1
+}
+
+###
+POST {{host}}/order/2/update_note
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{access}}
+
+{
+  "note": "this is a verification note"
+}
+
+###
+POST {{host}}/order/order/4/add_promo/
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{access}}
+
+{
+  "code": "2A33A"
+}
+
+
+###
+POST {{host}}/order/checkout
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{access}}
+

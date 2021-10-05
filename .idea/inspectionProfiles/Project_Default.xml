@@ -1,0 +1,52 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="Eslint" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="PyChainedComparisonsInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoreConstantInTheMiddle" value="true" />
+    </inspection_tool>
+    <inspection_tool class="PyCompatibilityInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ourVersions">
+        <value>
+          <list size="1">
+            <item index="0" class="java.lang.String" itemvalue="3.8" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="17">
+            <item index="0" class="java.lang.String" itemvalue="api" />
+            <item index="1" class="java.lang.String" itemvalue="django-crispy-forms" />
+            <item index="2" class="java.lang.String" itemvalue="django-allauth" />
+            <item index="3" class="java.lang.String" itemvalue="django-debug-toolbar" />
+            <item index="4" class="java.lang.String" itemvalue="Pillow" />
+            <item index="5" class="java.lang.String" itemvalue="django-ckeditor" />
+            <item index="6" class="java.lang.String" itemvalue="cryptography" />
+            <item index="7" class="java.lang.String" itemvalue="pretty-errors" />
+            <item index="8" class="java.lang.String" itemvalue="django-extensions" />
+            <item index="9" class="java.lang.String" itemvalue="django-silk" />
+            <item index="10" class="java.lang.String" itemvalue="django-easy-select2" />
+            <item index="11" class="java.lang.String" itemvalue="django-js-asset" />
+            <item index="12" class="java.lang.String" itemvalue="pillow" />
+            <item index="13" class="java.lang.String" itemvalue="django-jazzmin" />
+            <item index="14" class="java.lang.String" itemvalue="twilio" />
+            <item index="15" class="java.lang.String" itemvalue="django-cors-headers" />
+            <item index="16" class="java.lang.String" itemvalue="python-jose" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="django_fastapi.project.asgi.api" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PydanticInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="TsLint" enabled="true" level="WARNING" enabled_by_default="true" />
+  </profile>
+</component>
