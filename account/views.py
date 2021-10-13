@@ -12,7 +12,7 @@ from django.shortcuts import get_object_or_404
 auth_controller = Router(tags=['auth'])
 
 
-@auth_controller.post('/register', response={200: AccountSignupOut, 403: MessageOut, 500: MessageOut})
+@auth_controller.post('/register', auth = None, response={200: AccountSignupOut, 403: MessageOut, 500: MessageOut})
 def register(request, payload: AccountSignupIn):
     if payload.password1 != payload.password2:
         return response(HTTPStatus.BAD_REQUEST, {'message': 'Passwords does not match!'})
@@ -34,7 +34,7 @@ def register(request, payload: AccountSignupIn):
             return response(HTTPStatus.INTERNAL_SERVER_ERROR, {'message': 'An error occurred, please try again.'})
 
 
-@auth_controller.post('/login', response={200: AccountSigninOut, 404: MessageOut})
+@auth_controller.post('/login', auth = None, response={200: AccountSigninOut, 404: MessageOut})
 def login(request, payload: AccountSigninIn):
     user = authenticate(email=payload.email, password=payload.password)
     if user is not None:
